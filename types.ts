@@ -21,6 +21,7 @@ export interface Project {
   tags: string[];
   image: string;
   link: string;
+  category: 'Deep Learning' | 'Machine Learning' | 'Web Development';
 }
 
 export interface BlogPost {
@@ -67,9 +68,9 @@ export const DEFAULT_DATA: PortfolioData = {
     name: "Orbin Sunny",
     title: "Machine Learning Engineer",
     year: "2025",
-    heroImage: "https://picsum.photos/400/400",
+    heroImage: "https://media.licdn.com/dms/image/v2/D5603AQGIi_vvLlDEcw/profile-displayphoto-scale_400_400/B56ZjWdd.8HQAk-/0/1755944706573?e=1766016000&v=beta&t=XxpzGldpxBX5Mupqzujj_dJzRRSHAv6zFWBtOYhd88o",
     cvLink: "#",
-    contactEmail: "hello@orbinsunny.com"
+    contactEmail: "orbinsunny@gmail.com"
   },
   about: {
     heading: "Crafting Intelligence",
@@ -77,36 +78,30 @@ export const DEFAULT_DATA: PortfolioData = {
     signature: "Orbin S."
   },
   social: {
-    email: "mailto:hello@orbinsunny.com",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
-    kaggle: "https://kaggle.com",
-    medium: "https://medium.com"
+    email: "orbinsunny@gmail.com",
+    linkedin: "https://www.linkedin.com/in/orbin-sunny/",
+    github: "https://github.com/orbin123",
+    kaggle: "https://www.kaggle.com/orbinsunny",
+    medium: "https://medium.com/@orbinsunny"
   },
   experience: [
     {
       id: "1",
-      role: "Senior ML Engineer",
-      company: "Tech Corp AI",
-      duration: "2022 - Present",
-      description: "Leading a team of 5 engineers developing large language models for enterprise NLP solutions."
-    },
-    {
-      id: "2",
-      role: "Data Scientist",
-      company: "Innovate Data",
-      duration: "2019 - 2022",
-      description: "Built predictive models for customer churn analysis and optimized recommendation engines."
+      role: "Machine Learning Apprenticeship",
+      company: "Brototype",
+      duration: "2024 - Present",
+      description: "Pursuing an intensive apprenticeship at Brototype, gaining hands-on expertise in ML, DL, LLMs, and Computer Vision through a structured, project-driven learning program."
     }
   ],
   projects: [
     {
       id: "p1",
-      title: "Neural Vision",
-      description: "Real-time object detection system optimized for edge devices.",
-      tags: ["Python", "PyTorch", "IoT"],
-      image: "https://picsum.photos/600/400?grayscale",
-      link: "#"
+      title: "CycleGAN Sketch-to-Photo Translation",
+      description: "Translates unpaired face sketches to realistic photos using CycleGAN",
+      tags: ["DNN", "TensorFlow", "GAN"],
+      image: "https://drive.google.com/file/d/1q4twNE2hPn2yBm8HDfxqirYFGolIb0d6/view?usp=drive_link",
+      link: "#",
+      category: "Deep Learning"
     },
     {
       id: "p2",
@@ -114,7 +109,8 @@ export const DEFAULT_DATA: PortfolioData = {
       description: "Algorithmic trading bot using reinforcement learning.",
       tags: ["RL", "Finance", "Python"],
       image: "https://picsum.photos/600/401?grayscale",
-      link: "#"
+      link: "#",
+      category: "Machine Learning"
     }
   ],
   education: [
@@ -128,7 +124,7 @@ export const DEFAULT_DATA: PortfolioData = {
     {
       id: "e2",
       degree: "B.S. Computer Science",
-      institution: "MIT",
+      institution: "Oxford University",
       duration: "2016 - 2020",
       description: "Graduated with Honors. Minors in Mathematics and Cognitive Science."
     }
