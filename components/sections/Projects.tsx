@@ -51,7 +51,7 @@ const ProjectCategorySection: React.FC<ProjectCategorySectionProps> = ({ title, 
         className="flex gap-6 overflow-x-auto pb-8 px-4 md:px-0 snap-x snap-mandatory scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']"
       >
         {projects.map((project) => (
-          <div key={project.id} className="min-w-[85vw] md:min-w-[450px] flex-shrink-0 snap-start group relative rounded-2xl overflow-hidden glass-panel border-0">
+          <div key={project.id} className="w-[85vw] md:w-[450px] flex-shrink-0 snap-start group relative rounded-2xl overflow-hidden glass-panel border-0">
             {/* Image Container */}
             <div className="aspect-video w-full overflow-hidden relative">
               <div className="absolute inset-0 bg-charcoal/20 group-hover:bg-transparent transition-colors z-10"></div>
@@ -72,10 +72,10 @@ const ProjectCategorySection: React.FC<ProjectCategorySectionProps> = ({ title, 
             </div>
 
             {/* Content */}
-            <div className="p-6 md:p-8 relative">
-              <div className="flex justify-between items-start mb-4">
-                <h3 className="text-2xl font-serif font-medium group-hover:text-accent transition-colors">{project.title}</h3>
-                <a href={project.link} className="text-white/30 hover:text-white transition-colors p-2 bg-white/5 rounded-full hover:bg-white/10">
+            <div className="p-6 md:p-8 relative h-[180px]">
+              <div className="flex justify-between items-start gap-4 mb-4">
+                <h3 className="text-2xl font-serif font-medium group-hover:text-accent transition-colors line-clamp-2 flex-1" title={project.title}>{project.title}</h3>
+                <a href={project.link} className="text-white/30 hover:text-white transition-colors p-2 bg-white/5 rounded-full hover:bg-white/10 flex-shrink-0">
                   <ExternalLink size={18} />
                 </a>
               </div>
