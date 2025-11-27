@@ -75,7 +75,7 @@ export const DEFAULT_DATA: PortfolioData = {
   about: {
     heading: "Crafting Intelligence",
     content: "I am a Machine Learning Engineer passionate about building scalable AI systems. With a deep understanding of deep learning architectures and MLOps, I transform complex data into actionable insights. My work bridges the gap between theoretical research and real-world application.",
-    signature: "Orbin S."
+    signature: "/signature.svg"
   },
   social: {
     email: "mailto:orbinsunny@gmail.com",
