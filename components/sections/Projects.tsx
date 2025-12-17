@@ -90,12 +90,34 @@ const ProjectCategorySection: React.FC<ProjectCategorySectionProps> = ({ title, 
   );
 };
 
+// --- Stats Section ---
+interface StatCardProps {
+  label: string;
+  count: number;
+}
+
+const StatCard: React.FC<StatCardProps> = ({ label, count }) => (
+  <div className="glass-panel p-6 h-40 rounded-2xl flex flex-col items-center justify-center text-center group hover:bg-white/5 transition-colors duration-300">
+    <span className="text-4xl md:text-5xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-b from-white to-white/40 mb-2 group-hover:scale-110 transition-transform duration-300">
+      {count}
+    </span>
+    <span className="text-white/50 text-sm uppercase tracking-widest">{label}</span>
+  </div>
+);
+
 const Projects: React.FC<ProjectsProps> = ({ data }) => {
   const categories = [
     { title: 'Deep Learning Projects', id: 'Deep Learning' },
     { title: 'Machine Learning Projects', id: 'Machine Learning' },
     { title: 'Web Development Projects', id: 'Web Development' }
   ] as const;
+
+  // Calculate project counts
+  const counts = {
+    web: data.filter(p => p.category === 'Web Development').length,
+    ml: data.filter(p => p.category === 'Machine Learning').length,
+    dl: data.filter(p => p.category === 'Deep Learning').length
+  };
 
   return (
     <section className="max-w-6xl mx-auto py-12 space-y-24">
@@ -111,6 +133,13 @@ const Projects: React.FC<ProjectsProps> = ({ data }) => {
           />
         );
       })}
+
+      {/* Stats Section */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12 border-t border-white/5">
+        <StatCard label="Deep Learning" count={counts.dl} />
+        <StatCard label="Machine Learning" count={counts.ml} />
+        <StatCard label="Web Development" count={counts.web} />
+      </div>
     </section>
   );
 };

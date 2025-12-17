@@ -42,6 +42,25 @@ export interface SocialLinks {
   medium: string;
 }
 
+export interface GithubStats {
+  totalStars: number;
+  totalCommits: number;
+  totalPRs: number;
+  totalIssues: number;
+  contributedTo: number;
+  rank: string;
+}
+
+export interface LeetCodeStats {
+  totalProblemsSolved: number;
+  badges: number;
+  easy: number;
+  medium: number;
+  hard: number;
+  submissionsLastYear: number;
+  rank: number;
+}
+
 export interface PortfolioData {
   hero: {
     name: string;
@@ -54,7 +73,10 @@ export interface PortfolioData {
   about: {
     heading: string;
     content: string;
+
     signature: string;
+    githubStats?: GithubStats;
+    leetcodeStats?: LeetCodeStats;
   };
   social: SocialLinks;
   experience: Experience[];
@@ -75,7 +97,24 @@ export const DEFAULT_DATA: PortfolioData = {
   about: {
     heading: "Crafting Intelligence",
     content: "I am a Machine Learning Engineer passionate about building scalable AI systems. With a deep understanding of deep learning architectures and MLOps, I transform complex data into actionable insights. My work bridges the gap between theoretical research and real-world application.",
-    signature: "/signature.svg"
+    signature: "/signature.svg",
+    githubStats: {
+      totalStars: 3,
+      totalCommits: 85,
+      totalPRs: 12,
+      totalIssues: 5,
+      contributedTo: 8,
+      rank: "C+"
+    },
+    leetcodeStats: {
+      totalProblemsSolved: 262,
+      badges: 2,
+      easy: 189,
+      medium: 71,
+      hard: 2,
+      submissionsLastYear: 395,
+      rank: 500513
+    }
   },
   social: {
     email: "mailto:orbinsunny@gmail.com",
@@ -93,177 +132,186 @@ export const DEFAULT_DATA: PortfolioData = {
       description: "Pursuing an intensive apprenticeship at Brototype, gaining hands-on expertise in ML, DL, LLMs, and Computer Vision through a structured, project-driven learning program."
     }
   ],
-  
 
-projects: [
-  // --- Deep Learning Projects ---
-  {
-    id: "dl1",
-    title: "CycleGAN Sketch-to-Photo",
-    description: "Translates unpaired face sketches into realistic photographs using a TensorFlow-based CycleGAN. The model utilizes adversarial learning and cycle-consistency to preserve facial structure without paired training data.",
-    tags: ["TensorFlow", "GAN", "Computer Vision"],
-    image: "/cyclegan.png",
-    link: "https://github.com/orbin123/Machine_Learning/blob/main/Deep_Learning/GANs/PROJECT/cyclegan.ipynb",
-    category: "Deep Learning"
-  },
-  {
-    id: "dl2",
-    title: "GhostWriting – LSTM Text Gen",
-    description: "A character-level LSTM model that generates English text by learning language structure from Nietzsche's writings. It predicts characters based on learned grammar and vocabulary patterns.",
-    tags: ["LSTM", "NLP", "Generative AI"],
-    image: "/lstm_project.png",
-    link: "https://github.com/orbin123/Machine_Learning/blob/main/Deep_Learning/RNN/PROJECT/lstm-txt-generator.ipynb",
-    category: "Deep Learning"
-  },
-  {
-    id: "dl4",
-    title: "Neural Network from Scratch",
-    description: "A neural network for handwritten digit recognition built using only NumPy. Demonstrates manual implementation of forward and backpropagation on the MNIST dataset.",
-    tags: ["NumPy", "Math", "MNIST"],
-    image: "/NN_scratch.png",
-    link: "https://github.com/orbin123/Neural-Network_Scratch",
-    category: "Deep Learning"
-  },
 
-  // --- Machine Learning Projects ---
-  {
-    id: "ml1",
-    title: "Heart Disease Prediction",
-    description: "Predicts heart disease using 14 clinical features. Utilizes Python for data cleaning and analysis, employing an XGBoost classifier to achieve high accuracy in health diagnostics.",
-    tags: ["XGBoost", "Healthcare", "Classification"],
-    image: "/heartdisease.png",
-    link: "https://github.com/orbin123/Heart-Disease-Prediction",
-    category: "Machine Learning"
-  },
-  {
-    id: "ml2",
-    title: "Bulldozer Price Prediction",
-    description: "A regression project predicting future bulldozer sale prices using RandomForestRegressor. Involves time-series feature engineering and model fine-tuning.",
-    tags: ["Random Forest", "Regression", "Time Series"],
-    image: "/bulldozer.png",
-    link: "https://github.com/orbin123/Bulldozer-Price-Prediction",
-    category: "Machine Learning"
-  },
-  {
-    id: "ml3",
-    title: "Happiness Index 2024 Analysis",
-    description: "Analyzes the 2024 Happiness Index dataset to reveal how GDP, social support, and other factors impact worldwide happiness using statistical tests and visualization.",
-    tags: ["EDA", "Statistics", "Visualization"],
-    image: "/happiness.png",
-    link: "https://github.com/orbin123/Happiness-Index-2024-EDA-and-Statistical-Analysis-2024",
-    category: "Machine Learning"
-  },
-  {
-    id: "ml4",
-    title: "Climate Time Series Forecasting",
-    description: "Comparative analysis using ARIMA, Exponential Smoothing, Prophet, and LSTM to predict mean temperature. Identifies Prophet as the most accurate model for capturing seasonality.",
-    tags: ["Prophet", "ARIMA", "Forecasting"],
-    image: "/climate.png",
-    link: "https://www.kaggle.com/code/orbinsunny/climate-time-series?scriptVersionId=281480535",
-    category: "Machine Learning"
-  },
-  {
-    id: "ml5",
-    title: "Customer Churn Prediction",
-    description: "Predicts customer churn for telecom services using Logistic Regression, SVM, Random Forest, and XGBoost. Focuses on feature engineering and actionable retention strategies.",
-    tags: ["Classification", "XGBoost", "Analytics"],
-    image: "/customerchurn.png",
-    link: "https://github.com/orbin123/Machine_Learning/blob/main/Supervised_Learning/PROJECTS/Classification_project/Customer_churn.ipynb",
-    category: "Machine Learning"
-  },
-  {
-    id: "ml6",
-    title: "Ames House Price Prediction",
-    description: "Predicts home sale prices using advanced regression models like XGBoost, Random Forest, and LightGBM with extensive feature engineering pipelines.",
-    tags: ["Regression", "Advanced ML", "LightGBM"],
-    image: "/ames.png",
-    link: "https://github.com/orbin123/Machine_Learning/blob/main/Supervised_Learning/PROJECTS/Regression_project/Ames_house_prediction.ipynb",
-    category: "Machine Learning"
-  },
-  {
-    id: "ml7",
-    title: "Disease Prediction (Class.)",
-    description: "Medical diagnostic classification using Logistic Regression and Random Forest with GridSearchCV for hyperparameter tuning to maximize accuracy.",
-    tags: ["Classification", "GridSearchCV", "Healthcare"],
-    image: "/heartdiease2.png",
-    link: "https://github.com/orbin123/Machine_Learning/blob/main/Supervised_Learning/Advanced%20SML/Disease-Prediction/classification.ipynb",
-    category: "Machine Learning"
-  },
-  {
-    id: "ml8",
-    title: "Stock Prediction (Reg.)",
-    description: "Predicts stock closing prices on NSE data using Linear Regression and Random Forest. Includes feature importance insights and hyperparameter tuning.",
-    tags: ["Regression", "Finance", "Random Forest"],
-    image: "/stock.png",
-    link: "https://github.com/orbin123/Machine_Learning/blob/main/Supervised_Learning/Advanced%20SML/Stock-Prediction/regression.ipynb",
-    category: "Machine Learning"
-  },
-  {
-    id: "ml9",
-    title: "Humor Taste Segmentation",
-    description: "Unsupervised learning project using PCA and clustering (KMeans, DBSCAN) on the Jester dataset to identify distinct human humor preference segments.",
-    tags: ["Unsupervised", "Clustering", "PCA"],
-    image: "/jokes.png",
-    link: "https://github.com/orbin123/Machine_Learning/blob/main/Unsupervised_Learning/Projects/humour_taste.ipynb",
-    category: "Machine Learning"
-  },
+  projects: [
+    // --- Deep Learning Projects ---
+    {
+      id: "dl1",
+      title: "CycleGAN Sketch-to-Photo",
+      description: "Translates unpaired face sketches into realistic photographs using a TensorFlow-based CycleGAN. The model utilizes adversarial learning and cycle-consistency to preserve facial structure without paired training data.",
+      tags: ["TensorFlow", "GAN", "Computer Vision"],
+      image: "/cyclegan.png",
+      link: "https://github.com/orbin123/Machine_Learning/blob/main/Deep_Learning/GANs/PROJECT/cyclegan.ipynb",
+      category: "Deep Learning"
+    },
+    {
+      id: "dl2",
+      title: "AutoSupport – Seq2Seq NLP",
+      description: "An intelligent Seq2Seq LSTM model that automates support by classifying tickets and generating responses. It leverages word embeddings to streamline operations and reduce wait times.",
+      tags: ["Seq2Seq", "NLP", "Automation"],
+      image: "/nlp_custonmer_support.jpeg",
+      link: "https://colab.research.google.com/drive/1dbcrKAqIdfhMz0byqbMErbGZmcsFTJ1s#scrollTo=iXiDw7XMgrj7",
+      category: "Deep Learning"
+    },
+    {
+      id: "dl3",
+      title: "GhostWriting – LSTM Text Gen",
+      description: "A character-level LSTM model that generates English text by learning language structure from Nietzsche's writings. It predicts characters based on learned grammar and vocabulary patterns.",
+      tags: ["LSTM", "NLP", "Generative AI"],
+      image: "/lstm_project.png",
+      link: "https://github.com/orbin123/Machine_Learning/blob/main/Deep_Learning/RNN/PROJECT/lstm-txt-generator.ipynb",
+      category: "Deep Learning"
+    },
+    {
+      id: "dl4",
+      title: "Neural Network from Scratch",
+      description: "A neural network for handwritten digit recognition built using only NumPy. Demonstrates manual implementation of forward and backpropagation on the MNIST dataset.",
+      tags: ["NumPy", "Math", "MNIST"],
+      image: "/NN_scratch.png",
+      link: "https://github.com/orbin123/Neural-Network_Scratch",
+      category: "Deep Learning"
+    },
 
-  // --- Web Development Projects ---
-  {
-    id: "web1",
-    title: "Assistly: Chatbot Generator",
-    description: "A chatbot generator web app built with Next.js, TypeScript, and GraphQL. Enables users to deploy intelligent assistants powered by the ChatGPT API.",
-    tags: ["Next.js", "TypeScript", "GraphQL", "AI"],
-    image: "/assistly.png",
-    link: "https://github.com/orbin123/chatbot-ai-app",
-    category: "Web Development"
-  },
-  {
-    id: "web2",
-    title: "Notion Clone",
-    description: "A note-taking app utilizing Next.js and TypeScript for the frontend with a Firebase backend for real-time data storage, authentication, and collaborative features.",
-    tags: ["Next.js", "Firebase", "Real-time"],
-    image: "/notionclone.png",
-    link: "https://github.com/orbin123/notion-clone",
-    category: "Web Development"
-  },
-  {
-    id: "web3",
-    title: "Django E-Commerce",
-    description: "A Django-based storefront featuring cart, payment, and product management modules. Built for scalability and practical commercial application.",
-    tags: ["Django", "Python", "Full Stack"],
-    image: "/ecommerce.png",
-    link: "https://github.com/orbin123/django-ecommerce",
-    category: "Web Development"
-  },
-  {
-    id: "web4",
-    title: "Coursemy",
-    description: "Open-source app that creates structured educational playlists from YouTube. Built with Next.js/React frontend, FastAPI backend, and PostgreSQL.",
-    tags: ["Next.js", "FastAPI", "PostgreSQL"],
-    image: "/coursemy.png",
-    link: "https://github.com/orbin123/Coursemy",
-    category: "Web Development"
-  },
-  {
-    id: "web5",
-    title: "Salary Predictor",
-    description: "Connects a web frontend with a Python backend hosting a Linear Regression model to predict estimated salaries based on user input.",
-    tags: ["Python", "ML Integration", "Web"],
-    image: "/salarypredictor.png",
-    link: "https://github.com/orbin123/Salary_Predictor",
-    category: "Web Development"
-  },
-  {
-    id: "web6",
-    title: "Portfolio Website",
-    description: "Responsive portfolio built with pure HTML, CSS, and JavaScript. Showcases projects and skills without frameworks for clean, lightweight performance.",
-    tags: ["HTML/CSS", "JavaScript", "Responsive"],
-    image: "/portfolio.png",
-    link: "https://github.com/orbin123/Portfolio-Website",
-    category: "Web Development"
-  }
-],
+    // --- Machine Learning Projects ---
+    {
+      id: "ml1",
+      title: "Heart Disease Prediction",
+      description: "Predicts heart disease using 14 clinical features. Utilizes Python for data cleaning and analysis, employing an XGBoost classifier to achieve high accuracy in health diagnostics.",
+      tags: ["XGBoost", "Healthcare", "Classification"],
+      image: "/heartdisease.png",
+      link: "https://github.com/orbin123/Heart-Disease-Prediction",
+      category: "Machine Learning"
+    },
+    {
+      id: "ml2",
+      title: "Bulldozer Price Prediction",
+      description: "A regression project predicting future bulldozer sale prices using RandomForestRegressor. Involves time-series feature engineering and model fine-tuning.",
+      tags: ["Random Forest", "Regression", "Time Series"],
+      image: "/bulldozer.png",
+      link: "https://github.com/orbin123/Bulldozer-Price-Prediction",
+      category: "Machine Learning"
+    },
+    {
+      id: "ml3",
+      title: "Happiness Index 2024 Analysis",
+      description: "Analyzes the 2024 Happiness Index dataset to reveal how GDP, social support, and other factors impact worldwide happiness using statistical tests and visualization.",
+      tags: ["EDA", "Statistics", "Visualization"],
+      image: "/happiness.png",
+      link: "https://github.com/orbin123/Happiness-Index-2024-EDA-and-Statistical-Analysis-2024",
+      category: "Machine Learning"
+    },
+    {
+      id: "ml4",
+      title: "Climate Time Series Forecasting",
+      description: "Comparative analysis using ARIMA, Exponential Smoothing, Prophet, and LSTM to predict mean temperature. Identifies Prophet as the most accurate model for capturing seasonality.",
+      tags: ["Prophet", "ARIMA", "Forecasting"],
+      image: "/climate.png",
+      link: "https://www.kaggle.com/code/orbinsunny/climate-time-series?scriptVersionId=281480535",
+      category: "Machine Learning"
+    },
+    {
+      id: "ml5",
+      title: "Customer Churn Prediction",
+      description: "Predicts customer churn for telecom services using Logistic Regression, SVM, Random Forest, and XGBoost. Focuses on feature engineering and actionable retention strategies.",
+      tags: ["Classification", "XGBoost", "Analytics"],
+      image: "/customerchurn.png",
+      link: "https://github.com/orbin123/Machine_Learning/blob/main/Supervised_Learning/PROJECTS/Classification_project/Customer_churn.ipynb",
+      category: "Machine Learning"
+    },
+    {
+      id: "ml6",
+      title: "Ames House Price Prediction",
+      description: "Predicts home sale prices using advanced regression models like XGBoost, Random Forest, and LightGBM with extensive feature engineering pipelines.",
+      tags: ["Regression", "Advanced ML", "LightGBM"],
+      image: "/ames.png",
+      link: "https://github.com/orbin123/Machine_Learning/blob/main/Supervised_Learning/PROJECTS/Regression_project/Ames_house_prediction.ipynb",
+      category: "Machine Learning"
+    },
+    {
+      id: "ml7",
+      title: "Disease Prediction (Class.)",
+      description: "Medical diagnostic classification using Logistic Regression and Random Forest with GridSearchCV for hyperparameter tuning to maximize accuracy.",
+      tags: ["Classification", "GridSearchCV", "Healthcare"],
+      image: "/heartdiease2.png",
+      link: "https://github.com/orbin123/Machine_Learning/blob/main/Supervised_Learning/Advanced%20SML/Disease-Prediction/classification.ipynb",
+      category: "Machine Learning"
+    },
+    {
+      id: "ml8",
+      title: "Stock Prediction (Reg.)",
+      description: "Predicts stock closing prices on NSE data using Linear Regression and Random Forest. Includes feature importance insights and hyperparameter tuning.",
+      tags: ["Regression", "Finance", "Random Forest"],
+      image: "/stock.png",
+      link: "https://github.com/orbin123/Machine_Learning/blob/main/Supervised_Learning/Advanced%20SML/Stock-Prediction/regression.ipynb",
+      category: "Machine Learning"
+    },
+    {
+      id: "ml9",
+      title: "Humor Taste Segmentation",
+      description: "Unsupervised learning project using PCA and clustering (KMeans, DBSCAN) on the Jester dataset to identify distinct human humor preference segments.",
+      tags: ["Unsupervised", "Clustering", "PCA"],
+      image: "/jokes.png",
+      link: "https://github.com/orbin123/Machine_Learning/blob/main/Unsupervised_Learning/Projects/humour_taste.ipynb",
+      category: "Machine Learning"
+    },
+
+    // --- Web Development Projects ---
+    {
+      id: "web1",
+      title: "Assistly: Chatbot Generator",
+      description: "A chatbot generator web app built with Next.js, TypeScript, and GraphQL. Enables users to deploy intelligent assistants powered by the ChatGPT API.",
+      tags: ["Next.js", "TypeScript", "GraphQL", "AI"],
+      image: "/assistly.png",
+      link: "https://github.com/orbin123/chatbot-ai-app",
+      category: "Web Development"
+    },
+    {
+      id: "web2",
+      title: "Notion Clone",
+      description: "A note-taking app utilizing Next.js and TypeScript for the frontend with a Firebase backend for real-time data storage, authentication, and collaborative features.",
+      tags: ["Next.js", "Firebase", "Real-time"],
+      image: "/notionclone.png",
+      link: "https://github.com/orbin123/notion-clone",
+      category: "Web Development"
+    },
+    {
+      id: "web3",
+      title: "Django E-Commerce",
+      description: "A Django-based storefront featuring cart, payment, and product management modules. Built for scalability and practical commercial application.",
+      tags: ["Django", "Python", "Full Stack"],
+      image: "/ecommerce.png",
+      link: "https://github.com/orbin123/django-ecommerce",
+      category: "Web Development"
+    },
+    {
+      id: "web4",
+      title: "Coursemy",
+      description: "Open-source app that creates structured educational playlists from YouTube. Built with Next.js/React frontend, FastAPI backend, and PostgreSQL.",
+      tags: ["Next.js", "FastAPI", "PostgreSQL"],
+      image: "/coursemy.png",
+      link: "https://github.com/orbin123/Coursemy",
+      category: "Web Development"
+    },
+    {
+      id: "web5",
+      title: "Salary Predictor",
+      description: "Connects a web frontend with a Python backend hosting a Linear Regression model to predict estimated salaries based on user input.",
+      tags: ["Python", "ML Integration", "Web"],
+      image: "/salarypredictor.png",
+      link: "https://github.com/orbin123/Salary_Predictor",
+      category: "Web Development"
+    },
+    {
+      id: "web6",
+      title: "Portfolio Website",
+      description: "Responsive portfolio built with pure HTML, CSS, and JavaScript. Showcases projects and skills without frameworks for clean, lightweight performance.",
+      tags: ["HTML/CSS", "JavaScript", "Responsive"],
+      image: "/portfolio.png",
+      link: "https://github.com/orbin123/Portfolio-Website",
+      category: "Web Development"
+    }
+  ],
   education: [
     {
       id: "e1",
@@ -288,6 +336,18 @@ projects: [
     }
   ],
   blog: [
+
+    {
+      id: "b7",
+      title: "Natural Language Processing (NLP)",
+      date: "Dec 16, 2025",
+      excerpt:
+        "An intuitive walkthrough of core NLP concepts—from text cleaning and tokenization to vectorization, word embeddings, and n‑grams—showin...",
+      link: "https://medium.com/@orbinsunny/natural-language-processing-nlp-64a366d9803e",
+      readTime: "8 min read",
+      image: "/nlpblog.jpeg"
+    }
+    ,
     {
       id: "b6",
       title: "CycleGAN for Converting Face Sketches to Real Face Images",
@@ -342,5 +402,5 @@ projects: [
       readTime: "3 min read",
       image: "/compounding.png"
     }
-]
+  ]
 };
