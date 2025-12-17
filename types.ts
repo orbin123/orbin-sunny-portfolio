@@ -42,6 +42,25 @@ export interface SocialLinks {
   medium: string;
 }
 
+export interface GithubStats {
+  totalStars: number;
+  totalCommits: number;
+  totalPRs: number;
+  totalIssues: number;
+  contributedTo: number;
+  rank: string;
+}
+
+export interface LeetCodeStats {
+  totalProblemsSolved: number;
+  badges: number;
+  easy: number;
+  medium: number;
+  hard: number;
+  submissionsLastYear: number;
+  rank: number;
+}
+
 export interface PortfolioData {
   hero: {
     name: string;
@@ -54,7 +73,10 @@ export interface PortfolioData {
   about: {
     heading: string;
     content: string;
+
     signature: string;
+    githubStats?: GithubStats;
+    leetcodeStats?: LeetCodeStats;
   };
   social: SocialLinks;
   experience: Experience[];
@@ -75,7 +97,24 @@ export const DEFAULT_DATA: PortfolioData = {
   about: {
     heading: "Crafting Intelligence",
     content: "I am a Machine Learning Engineer passionate about building scalable AI systems. With a deep understanding of deep learning architectures and MLOps, I transform complex data into actionable insights. My work bridges the gap between theoretical research and real-world application.",
-    signature: "/signature.svg"
+    signature: "/signature.svg",
+    githubStats: {
+      totalStars: 3,
+      totalCommits: 85,
+      totalPRs: 12,
+      totalIssues: 5,
+      contributedTo: 8,
+      rank: "C+"
+    },
+    leetcodeStats: {
+      totalProblemsSolved: 262,
+      badges: 2,
+      easy: 189,
+      medium: 71,
+      hard: 2,
+      submissionsLastYear: 395,
+      rank: 500513
+    }
   },
   social: {
     email: "mailto:orbinsunny@gmail.com",
