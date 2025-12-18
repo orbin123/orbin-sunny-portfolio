@@ -100,8 +100,8 @@ export const DEFAULT_DATA: PortfolioData = {
     signature: "/signature.svg",
     githubStats: {
       totalStars: 3,
-      totalCommits: 85,
-      totalPRs: 12,
+      totalCommits: 89,
+      totalPRs: 13,
       totalIssues: 5,
       contributedTo: 8,
       rank: "C+"
