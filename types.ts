@@ -109,7 +109,7 @@ export const DEFAULT_DATA: PortfolioData = {
     leetcodeStats: {
       totalProblemsSolved: 262,
       badges: 2,
-      easy: 189,
+      easy: 190,
       medium: 71,
       hard: 2,
       submissionsLastYear: 395,
@@ -330,7 +330,7 @@ export const DEFAULT_DATA: PortfolioData = {
     {
       id: "e3",
       degree: "High School, CBSE",
-      institution: "St. George HSS, Velamkode",
+      institution: "Mar Baselios English Medium School",
       duration: "2018 - 2019",
       description: ""
     }
