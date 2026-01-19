@@ -150,21 +150,21 @@ const About: React.FC<AboutProps> = ({ data, social }) => {
                 <div className="flex-1 h-1.5 bg-white/10 rounded-full overflow-hidden">
                   <div className="h-full bg-green-400" style={{ width: `${(data.leetcodeStats.easy / data.leetcodeStats.totalProblemsSolved) * 100}%` }}></div>
                 </div>
-                <span className="text-xs text-white/60 tabular-nums">{data.leetcodeStats.easy}</span>
+                <span className="text-xs text-white/60 tabular-nums w-8 text-right">{data.leetcodeStats.easy}</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-xs text-yellow-400 w-12">Med</span>
                 <div className="flex-1 h-1.5 bg-white/10 rounded-full overflow-hidden">
                   <div className="h-full bg-yellow-400" style={{ width: `${(data.leetcodeStats.medium / data.leetcodeStats.totalProblemsSolved) * 100}%` }}></div>
                 </div>
-                <span className="text-xs text-white/60 tabular-nums">{data.leetcodeStats.medium}</span>
+                <span className="text-xs text-white/60 tabular-nums w-8 text-right">{data.leetcodeStats.medium}</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-xs text-red-400 w-12">Hard</span>
                 <div className="flex-1 h-1.5 bg-white/10 rounded-full overflow-hidden">
                   <div className="h-full bg-red-400" style={{ width: `${(data.leetcodeStats.hard / data.leetcodeStats.totalProblemsSolved) * 100}%` }}></div>
                 </div>
-                <span className="text-xs text-white/60 tabular-nums">{data.leetcodeStats.hard}</span>
+                <span className="text-xs text-white/60 tabular-nums w-8 text-right">{data.leetcodeStats.hard}</span>
               </div>
             </div>
 
