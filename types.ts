@@ -100,20 +100,20 @@ export const DEFAULT_DATA: PortfolioData = {
     signature: "/signature.svg",
     githubStats: {
       totalStars: 3,
-      totalCommits: 89,
-      totalPRs: 13,
+      totalCommits: 115,
+      totalPRs: 20,
       totalIssues: 5,
-      contributedTo: 8,
+      contributedTo: 11,
       rank: "C+"
     },
     leetcodeStats: {
-      totalProblemsSolved: 262,
+      totalProblemsSolved: 268,
       badges: 2,
-      easy: 190,
-      medium: 71,
+      easy: 191,
+      medium: 75,
       hard: 2,
-      submissionsLastYear: 395,
-      rank: 500513
+      submissionsLastYear: 383,
+      rank: 495906
     }
   },
   social: {

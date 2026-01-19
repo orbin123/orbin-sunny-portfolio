@@ -11,11 +11,26 @@ const NAV_ITEMS = ['Home', 'Experience', 'Projects', 'Education', 'Blog', 'About
 
 const Nav: React.FC<NavProps> = ({ activeSection, setActiveSection, logoName }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-40 px-6 py-6 flex justify-between items-center mix-blend-difference text-cream">
-        <div 
+      <nav
+        className={`fixed top-0 left-0 right-0 z-40 px-6 flex justify-between items-center animate-slide-down transition-all duration-700 ease-in-out border-b ${scrolled
+            ? 'bg-black/80 backdrop-blur-md shadow-lg py-4 border-white/10'
+            : 'mix-blend-difference py-6 border-transparent'
+          } text-cream`}
+      >
+        <div
           className="font-cinzel text-xl font-bold tracking-widest cursor-pointer hover:text-accent transition-colors"
           onClick={() => setActiveSection('Home')}
         >
@@ -28,9 +43,8 @@ const Nav: React.FC<NavProps> = ({ activeSection, setActiveSection, logoName }) 
             <li key={item}>
               <button
                 onClick={() => setActiveSection(item)}
-                className={`relative py-1 transition-all duration-300 ${
-                  activeSection === item ? 'text-accent' : 'text-cream/70 hover:text-white'
-                }`}
+                className={`relative py-1 transition-all duration-300 ${activeSection === item ? 'text-accent' : 'text-cream/70 hover:text-white'
+                  }`}
               >
                 {item}
                 {activeSection === item && (
