@@ -89,7 +89,7 @@ export const DEFAULT_DATA: PortfolioData = {
   hero: {
     name: "Orbin Sunny",
     title: "Machine Learning Engineer",
-    year: "2025",
+    year: "2026",
     heroImage: "/profile.png",
     cvLink: "https://drive.google.com/file/d/1n0XuFG95MFw34RSOtM_kR5bxg4paMAw3/view?usp=sharing",
     contactEmail: "orbinsunny@gmail.com"
@@ -345,23 +345,23 @@ export const DEFAULT_DATA: PortfolioData = {
     }
   ],
   blog: [
-    { 
-      "id": "b9", 
-      "title": "Natural Language Processing (Part 2)", 
-      "date": "Jan 18, 2026", 
-      "excerpt": "An advanced, practice-focused follow-up on key intermediate NLP concepts, bridging classical methods and modern deep learning. Topics include NER, sentiment analysis (VADER, BERT, LSTM), topic modeling, semantic search, and text summarisation.", 
-      "link": "https://medium.com/@orbinsunny/natural-language-processing-part-2-8150e195b4c8", 
-      "readTime": "12 min read", 
-      "image": "/nlp2-low.jpeg" 
+    {
+      "id": "b9",
+      "title": "Natural Language Processing (Part 2)",
+      "date": "Jan 18, 2026",
+      "excerpt": "An advanced, practice-focused follow-up on key intermediate NLP concepts, bridging classical methods and modern deep learning. Topics include NER, sentiment analysis (VADER, BERT, LSTM), topic modeling, semantic search, and text summarisation.",
+      "link": "https://medium.com/@orbinsunny/natural-language-processing-part-2-8150e195b4c8",
+      "readTime": "12 min read",
+      "image": "/nlp2-low.jpeg"
     },
-    { 
-      "id": "b8", 
-      "title": "My GSoC Journal: Part 1", 
-      "date": "Dec 29, 2025", 
-      "excerpt": "A reflective journal sharing five grounded tips for first-time applicants preparing for Google Summer of Code (GSoC) 2026. It covers timelines, organization shortlisting, proposal study, codebase navigation, and early community contributions.", 
-      "link": "https://medium.com/@orbinsunny/my-gsoc-journal-part-1-77932deaa857", 
-      "readTime": "6 min read", 
-      "image": "/gsoc1-low.jpeg" 
+    {
+      "id": "b8",
+      "title": "My GSoC Journal: Part 1",
+      "date": "Dec 29, 2025",
+      "excerpt": "A reflective journal sharing five grounded tips for first-time applicants preparing for Google Summer of Code (GSoC) 2026. It covers timelines, organization shortlisting, proposal study, codebase navigation, and early community contributions.",
+      "link": "https://medium.com/@orbinsunny/my-gsoc-journal-part-1-77932deaa857",
+      "readTime": "6 min read",
+      "image": "/gsoc1-low.jpeg"
     },
     {
       id: "b7",
