@@ -362,7 +362,7 @@ export const DEFAULT_DATA: PortfolioData = {
       "excerpt": "This blog demystifies how to deploy machine learning models on AWS SageMaker, Google Cloud Vertex AI, and Microsoft Azure ML, starting from core cloud concepts to fully managed ML workflows.",
       "link": "https://medium.com/@orbinsunny/model-deployment-aws-gcp-azure-5dac82a0b392",
       "readTime": "5 min read",
-      "image": "public/deploy2-low.jpeg"
+      "image": "/deploy2-low.jpeg"
     },
     {
       "id": "b10",
