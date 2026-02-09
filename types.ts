@@ -136,6 +136,7 @@ export const DEFAULT_DATA: PortfolioData = {
 
   projects: [
     // --- Deep Learning Projects ---
+    
     {
       id: "dl1",
       title: "CycleGAN Sketch-to-Photo",
@@ -174,6 +175,15 @@ export const DEFAULT_DATA: PortfolioData = {
     },
     {
       id: "dl5",
+      title: "CNN Deployed on SageMaker",
+      description: "Implemented an end-to-end deep learning pipeline to train and deploy a production-ready MNIST digit classifier using PyTorch and AWS SageMaker. Includes robust data preparation, custom lightweight CNN (~390k parameters), and deployment to a real-time inference endpoint on AWS SageMaker.",
+      tags: ["PyTorch", "AWS SageMaker", "CNN", "MLOps"],
+      image: "/aws-low.jpeg",
+      link: "https://github.com/orbin123/Machine_Learning/tree/main/Model_Deployment/WEEK2/Mini_Project",
+      category: "Deep Learning"
+    },
+    {
+      id: "dl6",
       title: "Neural Network from Scratch",
       description: "A neural network for handwritten digit recognition built using only NumPy. Demonstrates manual implementation of forward and backpropagation on the MNIST dataset.",
       tags: ["NumPy", "Math", "MNIST"],
@@ -345,6 +355,24 @@ export const DEFAULT_DATA: PortfolioData = {
     }
   ],
   blog: [
+    {
+      "id": "b11",
+      "title": "Cloud ML Deployment: AWS SageMaker, Vertex AI, and Azure ML Explained",
+      "date": "Feb 5, 2026",
+      "excerpt": "This blog demystifies how to deploy machine learning models on AWS SageMaker, Google Cloud Vertex AI, and Microsoft Azure ML, starting from core cloud concepts to fully managed ML workflows.",
+      "link": "https://medium.com/@orbinsunny/model-deployment-aws-gcp-azure-5dac82a0b392",
+      "readTime": "5 min read",
+      "image": "public/deploy2-low.jpeg"
+    },
+    {
+      "id": "b10",
+      "title": "Deploying ML Models with Flask, Django, and Docker",
+      "date": "Jan 27, 2026",
+      "excerpt": "A beginner-friendly guide walking through saving ML models, exposing them as REST APIs using Flask and Django, and containerizing everything with Docker and Docker Compose.",
+      "link": "https://medium.com/@orbinsunny/model-deployment-flask-django-and-docker-bbc8f42a3821",
+      "readTime": "10 min read",
+      "image": "/deploy1-low.jpeg"
+    },
     {
       "id": "b9",
       "title": "Natural Language Processing (Part 2)",
