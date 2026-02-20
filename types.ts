@@ -136,7 +136,7 @@ export const DEFAULT_DATA: PortfolioData = {
 
   projects: [
     // --- Deep Learning Projects ---
-    
+
     {
       id: "dl1",
       title: "CycleGAN Sketch-to-Photo",
@@ -222,6 +222,15 @@ export const DEFAULT_DATA: PortfolioData = {
     },
     {
       id: "ml4",
+      title: "Boston House Price Prediction",
+      description: "A production-ready machine learning model for predicting Boston house prices, built with Flask and powered by a Random Forest regression model. Fully containerized using Docker, with Prometheus and Grafana for monitoring and a robust GitHub Actions CI/CD pipeline.",
+      tags: ["CI/CD", "GitHub Actions", "MLOps"],
+      image: "/boston-housing.jpeg",
+      link: "https://github.com/orbin123/boston-housing-githubactions",
+      category: "Machine Learning"
+    },
+    {
+      id: "ml5",
       title: "Climate Time Series Forecasting",
       description: "Comparative analysis using ARIMA, Exponential Smoothing, Prophet, and LSTM to predict mean temperature. Identifies Prophet as the most accurate model for capturing seasonality.",
       tags: ["Prophet", "ARIMA", "Forecasting"],
@@ -230,7 +239,7 @@ export const DEFAULT_DATA: PortfolioData = {
       category: "Machine Learning"
     },
     {
-      id: "ml5",
+      id: "ml6",
       title: "Customer Churn Prediction",
       description: "Predicts customer churn for telecom services using Logistic Regression, SVM, Random Forest, and XGBoost. Focuses on feature engineering and actionable retention strategies.",
       tags: ["Classification", "XGBoost", "Analytics"],
@@ -239,7 +248,7 @@ export const DEFAULT_DATA: PortfolioData = {
       category: "Machine Learning"
     },
     {
-      id: "ml6",
+      id: "ml7",
       title: "Ames House Price Prediction",
       description: "Predicts home sale prices using advanced regression models like XGBoost, Random Forest, and LightGBM with extensive feature engineering pipelines.",
       tags: ["Regression", "Advanced ML", "LightGBM"],
@@ -248,7 +257,7 @@ export const DEFAULT_DATA: PortfolioData = {
       category: "Machine Learning"
     },
     {
-      id: "ml7",
+      id: "ml8",
       title: "Disease Prediction (Class.)",
       description: "Medical diagnostic classification using Logistic Regression and Random Forest with GridSearchCV for hyperparameter tuning to maximize accuracy.",
       tags: ["Classification", "GridSearchCV", "Healthcare"],
@@ -257,7 +266,7 @@ export const DEFAULT_DATA: PortfolioData = {
       category: "Machine Learning"
     },
     {
-      id: "ml8",
+      id: "ml9",
       title: "Stock Prediction (Reg.)",
       description: "Predicts stock closing prices on NSE data using Linear Regression and Random Forest. Includes feature importance insights and hyperparameter tuning.",
       tags: ["Regression", "Finance", "Random Forest"],
@@ -266,7 +275,7 @@ export const DEFAULT_DATA: PortfolioData = {
       category: "Machine Learning"
     },
     {
-      id: "ml9",
+      id: "ml10",
       title: "Humor Taste Segmentation",
       description: "Unsupervised learning project using PCA and clustering (KMeans, DBSCAN) on the Jester dataset to identify distinct human humor preference segments.",
       tags: ["Unsupervised", "Clustering", "PCA"],
