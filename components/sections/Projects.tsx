@@ -109,14 +109,16 @@ const Projects: React.FC<ProjectsProps> = ({ data }) => {
   const categories = [
     { title: 'Deep Learning Projects', id: 'Deep Learning' },
     { title: 'Machine Learning Projects', id: 'Machine Learning' },
-    { title: 'Web Development Projects', id: 'Web Development' }
+    { title: 'Web Development Projects', id: 'Web Development' },
+    { title: 'App Development Projects', id: 'App Development' }
   ] as const;
 
   // Calculate project counts
   const counts = {
     web: data.filter(p => p.category === 'Web Development').length,
     ml: data.filter(p => p.category === 'Machine Learning').length,
-    dl: data.filter(p => p.category === 'Deep Learning').length
+    dl: data.filter(p => p.category === 'Deep Learning').length,
+    app: data.filter(p => p.category === 'App Development').length
   };
 
   return (
@@ -135,10 +137,11 @@ const Projects: React.FC<ProjectsProps> = ({ data }) => {
       })}
 
       {/* Stats Section */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12 border-t border-white/5">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-12 border-t border-white/5">
         <StatCard label="Deep Learning" count={counts.dl} />
         <StatCard label="Machine Learning" count={counts.ml} />
         <StatCard label="Web Development" count={counts.web} />
+        <StatCard label="App Development" count={counts.app} />
       </div>
     </section>
   );
