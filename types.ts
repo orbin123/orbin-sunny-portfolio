@@ -21,7 +21,7 @@ export interface Project {
   tags: string[];
   image: string;
   link: string;
-  category: 'Deep Learning' | 'Machine Learning' | 'Web Development';
+  category: 'Deep Learning' | 'Machine Learning' | 'Web Development' | 'App Development';
 }
 
 export interface BlogPost {
@@ -203,6 +203,15 @@ export const DEFAULT_DATA: PortfolioData = {
       category: "Machine Learning"
     },
     {
+      id: "ml_spark_churn",
+      title: "Customer Churn Project",
+      description: "This project is an end-to-end Apache Spark ETL and machine learning pipeline for predicting customer churn in the telecom domain. It extracts data from CSV and SQLite, transforms and validates it, and stores optimized Parquet datasets for analytics and modeling. Using PySpark, it performs feature engineering on 20+ demographic, service, and financial attributes and trains Logistic Regression and Random Forest models with proper evaluation (accuracy, F1, ROC-AUC). The repository includes modular ETL code, EDA notebooks, synthetic data generation, saved production-ready models, and a clear roadmap for deployment and monitoring enhancements.",
+      tags: ["Apache Spark", "ETL", "PySpark"],
+      image: "/spark-low.jpeg",
+      link: "https://github.com/orbin123/Machine_Learning/tree/main/Data-Engineering/Customer-Churn-Project/spark-etl-pipeline",
+      category: "Machine Learning"
+    },
+    {
       id: "ml2",
       title: "Bulldozer Price Prediction",
       description: "A regression project predicting future bulldozer sale prices using RandomForestRegressor. Involves time-series feature engineering and model fine-tuning.",
@@ -338,6 +347,16 @@ export const DEFAULT_DATA: PortfolioData = {
       image: "/portfolio.png",
       link: "https://github.com/orbin123/Portfolio-Website",
       category: "Web Development"
+    },
+    // --- App Development Projects ---
+    {
+      id: "app1",
+      title: "SplitSOL – Expense Splitter",
+      description: "SplitSOL is a mobile-first Solana group expense app that lets friends split shared costs in USDC, track simplified balances, and settle everything on-chain using Solflare wallet authentication. It supports QR-based member invites, AutoPay with swap-assisted payments, rich mobile polish (haptics, notifications), and a fully local-first flow built with Expo, React Native, Expo Router, and Zustand. This was done for participating in Solana Hackathon.",
+      tags: ["Expo", "React Native", "Solana", "Zustand"],
+      image: "/splitsol-l.jpeg",
+      link: "https://github.com/orbin123/SplitSOL",
+      category: "App Development"
     }
   ],
   education: [
