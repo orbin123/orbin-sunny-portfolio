@@ -137,9 +137,11 @@ const Projects: React.FC<ProjectsProps> = ({ data }) => {
       })}
 
       {/* Stats Section */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-12 border-t border-white/5">
-        {categories.map(category => (
-          <StatCard key={category.id} label={category.id} count={data.filter(project => project.category === category.id).length} />
+      <div className="grid grid-cols-1 md:grid-cols-6 gap-6 pt-12 border-t border-white/5">
+        {categories.map((category, index) => (
+          <div key={category.id} className={`md:col-span-2 ${index === 3 ? 'md:col-start-2' : ''}`}>
+            <StatCard label={category.id} count={data.filter(project => project.category === category.id).length} />
+          </div>
         ))}
       </div>
     </section>
