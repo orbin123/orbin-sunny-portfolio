@@ -21,7 +21,9 @@ export interface Project {
   tags: string[];
   image: string;
   link: string;
-  category: 'Deep Learning' | 'Machine Learning' | 'Web Development' | 'App Development';
+  liveLink?: string;
+  liveLinkLabel?: string;
+  category: 'AI Engineering' | 'Deep Learning' | 'Machine Learning' | 'Web Development' | 'App Development';
 }
 
 export interface BlogPost {
@@ -98,22 +100,24 @@ export const DEFAULT_DATA: PortfolioData = {
     heading: "Crafting Intelligence",
     content: "I am a Machine Learning Engineer passionate about building scalable AI systems. With a deep understanding of deep learning architectures and MLOps, I transform complex data into actionable insights. My work bridges the gap between theoretical research and real-world application.",
     signature: "/signature.svg",
+    // Snapshot verified from the GitHub profile's readme-stats card on October 16, 2026.
     githubStats: {
-      totalStars: 3,
-      totalCommits: 115,
-      totalPRs: 20,
+      totalStars: 12,
+      totalCommits: 723,
+      totalPRs: 274,
       totalIssues: 5,
-      contributedTo: 11,
-      rank: "C+"
+      contributedTo: 7,
+      rank: "B+"
     },
+    // Solved counts/rank supplied by Orbin; submissions verified on the public profile.
     leetcodeStats: {
-      totalProblemsSolved: 268,
+      totalProblemsSolved: 273,
       badges: 2,
-      easy: 191,
-      medium: 75,
+      easy: 195,
+      medium: 76,
       hard: 2,
-      submissionsLastYear: 383,
-      rank: 495906
+      submissionsLastYear: 35,
+      rank: 586183
     }
   },
   social: {
@@ -125,6 +129,13 @@ export const DEFAULT_DATA: PortfolioData = {
   },
   experience: [
     {
+      id: "flyrank",
+      role: "Machine Learning Internship Program",
+      company: "FlyRank AI",
+      duration: "Jul 2026 - Oct 2026",
+      description: "Completed a remote machine learning internship program with practical assignments and a reviewed, accepted capstone. Built a reproducible CTR benchmarking study on 30,000 pages using Python, pandas, and scikit-learn, comparing a peer baseline with decision tree and random forest models. Applied client-disjoint validation and leakage checks, and documented findings, limitations, and a proposed editorial review workflow."
+    },
+    {
       id: "1",
       role: "Machine Learning Apprenticeship",
       company: "Brototype",
@@ -135,6 +146,37 @@ export const DEFAULT_DATA: PortfolioData = {
 
 
   projects: [
+    // --- AI Engineering Projects ---
+    {
+      id: "ai-lingo",
+      title: "Lingo AI – Capstone Project",
+      description: "My capstone: an AI English coach with adaptive lessons, speech assessment, and RAG memory of recurring mistakes. LangGraph agents personalize feedback, while deterministic scoring tracks seven skills.",
+      tags: ["Next.js", "FastAPI", "LangGraph", "RAG"],
+      image: "/lingo-ai.webp",
+      link: "https://github.com/orbin123/lingos-ai",
+      liveLink: "https://www.lingosai.com/",
+      category: "AI Engineering"
+    },
+    {
+      id: "ai-opsflow",
+      title: "OpsFlow-Agent",
+      description: "An operations copilot pairing a calibrated SVM router with a bounded tool-calling agent for analysis, summaries, policy lookup, email drafts, and reminders. Saved chats expose tool activity. Hosted demo requires a password.",
+      tags: ["FastAPI", "Streamlit", "Groq", "scikit-learn"],
+      image: "/opsflow-agent.webp",
+      link: "https://github.com/orbin123/opsflow-agent",
+      liveLink: "https://opsflow-temporary-demo.onrender.com/",
+      liveLinkLabel: "Temporary demo (password required)",
+      category: "AI Engineering"
+    },
+    {
+      id: "ai-atlas",
+      title: "Atlas RAG",
+      description: "A local document Q&A system with PDF, DOCX, and TXT ingestion, semantic search, and source-cited answers. Uses Sentence Transformers, FAISS, and SQLite with retrieval evaluation and optional LLM generation.",
+      tags: ["React", "FastAPI", "FAISS", "RAG"],
+      image: "/atlas-rag.webp",
+      link: "https://github.com/orbin123/atlas-rag",
+      category: "AI Engineering"
+    },
     // --- Deep Learning Projects ---
 
     {
@@ -340,6 +382,24 @@ export const DEFAULT_DATA: PortfolioData = {
       category: "Web Development"
     },
     {
+      id: "web-checkbox",
+      title: "Checkbox",
+      description: "A distraction-free desktop learning tracker with tabbed workspaces, sequential checkbox grids, live progress bars, and persistent storage. Built with Electron, React, and Zustand, with a browser development mode.",
+      tags: ["Electron", "React", "Zustand"],
+      image: "/checkbox.webp",
+      link: "https://github.com/orbin123/Checkbox",
+      category: "Web Development"
+    },
+    {
+      id: "web-white-noise",
+      title: "WhiteNoiseBar",
+      description: "A macOS menu bar sound player with white, pink, and brown noise, imported audio, playback modes, and independent volume control. Built with Electron and JavaScript, it remembers the library and playback state.",
+      tags: ["Electron", "JavaScript", "macOS"],
+      image: "/white-noise-bar.webp",
+      link: "https://github.com/orbin123/WhiteNoiseBar",
+      category: "Web Development"
+    },
+    {
       id: "web6",
       title: "Portfolio Website",
       description: "Responsive portfolio built with pure HTML, CSS, and JavaScript. Showcases projects and skills without frameworks for clean, lightweight performance.",
@@ -349,6 +409,24 @@ export const DEFAULT_DATA: PortfolioData = {
       category: "Web Development"
     },
     // --- App Development Projects ---
+    {
+      id: "app-invoxcel",
+      title: "InvoXcel",
+      description: "A Django invoice-processing app using Azure Document Intelligence. Review extracted summaries and line items beside source documents, correct values, and export approved data to Excel, CSV, or JSON.",
+      tags: ["Django", "Azure AI", "Python", "Excel"],
+      image: "/invoxcel.webp",
+      link: "https://github.com/orbin123/invoxcel",
+      category: "App Development"
+    },
+    {
+      id: "app-job-hunter",
+      title: "Job Hunter",
+      description: "An AI job-hunting assistant with application tracking, personalized cover letters, outreach drafts, company research, and interview preparation. Built with React, Express, and Gemini, with a simulation mode for local demos.",
+      tags: ["React", "TypeScript", "Express", "Gemini"],
+      image: "/job-hunter.webp",
+      link: "https://github.com/orbin123/job-hunter",
+      category: "App Development"
+    },
     {
       id: "app1",
       title: "SplitSOL – Expense Splitter",

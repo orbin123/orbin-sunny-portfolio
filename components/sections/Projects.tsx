@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { PortfolioData, Project } from '../../types';
-import { ExternalLink, ChevronLeft, ChevronRight } from '../ui/Icons';
+import { ExternalLink, Github, ChevronLeft, ChevronRight } from '../ui/Icons';
 
 interface ProjectsProps {
   data: PortfolioData['projects'];
@@ -75,9 +75,16 @@ const ProjectCategorySection: React.FC<ProjectCategorySectionProps> = ({ title, 
             <div className="p-6 md:p-8 relative h-[180px]">
               <div className="flex justify-between items-start gap-4 mb-4">
                 <h3 className="text-2xl font-serif font-medium group-hover:text-accent transition-colors line-clamp-2 flex-1" title={project.title}>{project.title}</h3>
-                <a href={project.link} className="text-white/30 hover:text-white transition-colors p-2 bg-white/5 rounded-full hover:bg-white/10 flex-shrink-0">
-                  <ExternalLink size={18} />
-                </a>
+                <div className="flex gap-2 flex-shrink-0">
+                  <a href={project.link} aria-label={`View ${project.title} source`} title="View source" className="text-white/30 hover:text-white transition-colors p-2 bg-white/5 rounded-full hover:bg-white/10 flex-shrink-0">
+                    {project.liveLink ? <Github size={18} /> : <ExternalLink size={18} />}
+                  </a>
+                  {project.liveLink && (
+                    <a href={project.liveLink} aria-label={`${project.title}: ${project.liveLinkLabel ?? 'Live site'}`} title={project.liveLinkLabel ?? 'Live site'} className="text-white/30 hover:text-white transition-colors p-2 bg-white/5 rounded-full hover:bg-white/10 flex-shrink-0">
+                      <ExternalLink size={18} />
+                    </a>
+                  )}
+                </div>
               </div>
               <p className="text-white/60 text-sm leading-relaxed line-clamp-3">
                 {project.description}
@@ -107,19 +114,12 @@ const StatCard: React.FC<StatCardProps> = ({ label, count }) => (
 
 const Projects: React.FC<ProjectsProps> = ({ data }) => {
   const categories = [
+    { title: 'AI Engineering Projects', id: 'AI Engineering' },
     { title: 'Deep Learning Projects', id: 'Deep Learning' },
     { title: 'Machine Learning Projects', id: 'Machine Learning' },
     { title: 'Web Development Projects', id: 'Web Development' },
     { title: 'App Development Projects', id: 'App Development' }
   ] as const;
-
-  // Calculate project counts
-  const counts = {
-    web: data.filter(p => p.category === 'Web Development').length,
-    ml: data.filter(p => p.category === 'Machine Learning').length,
-    dl: data.filter(p => p.category === 'Deep Learning').length,
-    app: data.filter(p => p.category === 'App Development').length
-  };
 
   return (
     <section className="max-w-6xl mx-auto py-12 space-y-24">
@@ -138,10 +138,9 @@ const Projects: React.FC<ProjectsProps> = ({ data }) => {
 
       {/* Stats Section */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-12 border-t border-white/5">
-        <StatCard label="Deep Learning" count={counts.dl} />
-        <StatCard label="Machine Learning" count={counts.ml} />
-        <StatCard label="Web Development" count={counts.web} />
-        <StatCard label="App Development" count={counts.app} />
+        {categories.map(category => (
+          <StatCard key={category.id} label={category.id} count={data.filter(project => project.category === category.id).length} />
+        ))}
       </div>
     </section>
   );
