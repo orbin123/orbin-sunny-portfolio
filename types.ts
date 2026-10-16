@@ -149,7 +149,7 @@ export const DEFAULT_DATA: PortfolioData = {
     // --- AI Engineering Projects ---
     {
       id: "ai-lingo",
-      title: "Lingo AI – Capstone Project",
+      title: "Lingos AI",
       description: "My capstone: an AI English coach with adaptive lessons, speech assessment, and RAG memory of recurring mistakes. LangGraph agents personalize feedback, while deterministic scoring tracks seven skills.",
       tags: ["Next.js", "FastAPI", "LangGraph", "RAG"],
       image: "/lingo-ai.webp",
@@ -235,6 +235,15 @@ export const DEFAULT_DATA: PortfolioData = {
     },
 
     // --- Machine Learning Projects ---
+    {
+      id: "ml-flyrank",
+      title: "FlyRank ML Research",
+      description: "A notebook-based search CTR study covering data contracts, leakage checks, peer baselines, tree/forest models, and client-disjoint validation. Includes a reproducible 30,000-page capstone study and research paper.",
+      tags: ["Python", "scikit-learn", "pandas", "Research"],
+      image: "/flyrank-ml.webp",
+      link: "https://github.com/orbin123/flyrank-ml-internship",
+      category: "Machine Learning"
+    },
     {
       id: "ml1",
       title: "Heart Disease Prediction",
@@ -382,21 +391,21 @@ export const DEFAULT_DATA: PortfolioData = {
       category: "Web Development"
     },
     {
-      id: "web-checkbox",
-      title: "Checkbox",
-      description: "A distraction-free desktop learning tracker with tabbed workspaces, sequential checkbox grids, live progress bars, and persistent storage. Built with Electron, React, and Zustand, with a browser development mode.",
-      tags: ["Electron", "React", "Zustand"],
-      image: "/checkbox.webp",
-      link: "https://github.com/orbin123/Checkbox",
+      id: "web-invoxcel",
+      title: "InvoXcel",
+      description: "A Django invoice-processing app using Azure Document Intelligence. Review extracted summaries and line items beside source documents, correct values, and export approved data to Excel, CSV, or JSON.",
+      tags: ["Django", "Azure AI", "Python", "Excel"],
+      image: "/invoxcel.webp",
+      link: "https://github.com/orbin123/invoxcel",
       category: "Web Development"
     },
     {
-      id: "web-white-noise",
-      title: "WhiteNoiseBar",
-      description: "A macOS menu bar sound player with white, pink, and brown noise, imported audio, playback modes, and independent volume control. Built with Electron and JavaScript, it remembers the library and playback state.",
-      tags: ["Electron", "JavaScript", "macOS"],
-      image: "/white-noise-bar.webp",
-      link: "https://github.com/orbin123/WhiteNoiseBar",
+      id: "web-job-hunter",
+      title: "Job Hunter",
+      description: "An AI job-hunting assistant with application tracking, personalized cover letters, outreach drafts, company research, and interview preparation. Built with React, Express, and Gemini, with a simulation mode for local demos.",
+      tags: ["React", "TypeScript", "Express", "Gemini"],
+      image: "/job-hunter.webp",
+      link: "https://github.com/orbin123/job-hunter",
       category: "Web Development"
     },
     {
@@ -410,21 +419,21 @@ export const DEFAULT_DATA: PortfolioData = {
     },
     // --- App Development Projects ---
     {
-      id: "app-invoxcel",
-      title: "InvoXcel",
-      description: "A Django invoice-processing app using Azure Document Intelligence. Review extracted summaries and line items beside source documents, correct values, and export approved data to Excel, CSV, or JSON.",
-      tags: ["Django", "Azure AI", "Python", "Excel"],
-      image: "/invoxcel.webp",
-      link: "https://github.com/orbin123/invoxcel",
+      id: "app-checkbox",
+      title: "Checkbox",
+      description: "A distraction-free desktop learning tracker with tabbed workspaces, sequential checkbox grids, live progress bars, and persistent storage. Built with Electron, React, and Zustand, with a browser development mode.",
+      tags: ["Electron", "React", "Zustand"],
+      image: "/checkbox.webp",
+      link: "https://github.com/orbin123/Checkbox",
       category: "App Development"
     },
     {
-      id: "app-job-hunter",
-      title: "Job Hunter",
-      description: "An AI job-hunting assistant with application tracking, personalized cover letters, outreach drafts, company research, and interview preparation. Built with React, Express, and Gemini, with a simulation mode for local demos.",
-      tags: ["React", "TypeScript", "Express", "Gemini"],
-      image: "/job-hunter.webp",
-      link: "https://github.com/orbin123/job-hunter",
+      id: "app-white-noise",
+      title: "WhiteNoiseBar",
+      description: "A macOS menu bar sound player with white, pink, and brown noise, imported audio, playback modes, and independent volume control. Built with Electron and JavaScript, it remembers the library and playback state.",
+      tags: ["Electron", "JavaScript", "macOS"],
+      image: "/white-noise-bar.webp",
+      link: "https://github.com/orbin123/WhiteNoiseBar",
       category: "App Development"
     },
     {

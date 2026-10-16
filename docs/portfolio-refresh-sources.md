@@ -8,15 +8,16 @@ Descriptions and technologies were checked against each repository README:
 
 | Entry | Source | Placement |
 | --- | --- | --- |
-| Lingo AI | [lingos-ai](https://github.com/orbin123/lingos-ai#readme) | First in AI Engineering; capstone designation supplied by Orbin and confirmed in his profile README |
+| Lingos AI | [lingos-ai](https://github.com/orbin123/lingos-ai#readme) | First in AI Engineering; short title requested by Orbin |
 | OpsFlow-Agent | [opsflow-agent](https://github.com/orbin123/opsflow-agent#readme) | Second in AI Engineering |
 | Atlas RAG | [atlas-rag](https://github.com/orbin123/atlas-rag#readme) | Third in AI Engineering |
-| Checkbox | [Checkbox](https://github.com/orbin123/Checkbox#readme) | Web Development, immediately after Salary Predictor, as requested |
-| WhiteNoiseBar | [WhiteNoiseBar](https://github.com/orbin123/WhiteNoiseBar#readme) | Web Development, after Checkbox, as requested |
-| InvoXcel | [invoxcel](https://github.com/orbin123/invoxcel#readme) | App Development; Orbin confirmed this was the intended “inboxer” project |
-| Job Hunter | [job-hunter](https://github.com/orbin123/job-hunter#readme) | App Development, as requested |
+| Checkbox | [Checkbox](https://github.com/orbin123/Checkbox#readme) | App Development |
+| WhiteNoiseBar | [WhiteNoiseBar](https://github.com/orbin123/WhiteNoiseBar#readme) | App Development |
+| InvoXcel | [invoxcel](https://github.com/orbin123/invoxcel#readme) | Web Development, after Salary Predictor; Orbin confirmed this was the intended “inboxer” project |
+| Job Hunter | [job-hunter](https://github.com/orbin123/job-hunter#readme) | Web Development, after InvoXcel |
+| FlyRank ML Research | [flyrank-ml-internship](https://github.com/orbin123/flyrank-ml-internship#readme) | First in Machine Learning |
 
-Checkbox and WhiteNoiseBar are described accurately as Electron desktop apps while retaining the categories requested by Orbin. InvoXcel and Job Hunter are web apps placed in the requested App Development section. Job Hunter's job scans can be simulated; the copy does not claim a live scraped job feed or automated email delivery.
+Checkbox and WhiteNoiseBar are Electron desktop apps in App Development. InvoXcel and Job Hunter are web apps in Web Development. These placements follow Orbin's correction. Job Hunter's job scans can be simulated; the copy does not claim a live scraped job feed or automated email delivery.
 
 Deployment destinations come from the repository READMEs and were opened in the browser:
 
@@ -32,6 +33,12 @@ Deployment destinations come from the repository READMEs and were opened in the 
 
 The provider describes this as a remote educational internship program. The entry uses “Machine Learning Internship Program.” The capstone did not improve the primary weighted holdout result; the portfolio makes no improvement claim.
 
+## FlyRank project coverage
+
+The project card summarizes the executed [assignment notebooks](https://github.com/orbin123/flyrank-ml-internship/tree/main/flyrank-ml-internship-starter-main/work/notebooks): research framing, ML task framing, data contracts, leakage checks, signal audit, peer baseline, decision tree/random forest regression, validation audit, action playbook, and reproducible capstone. The main CTR study uses the 30,000-page starter snapshot; the warehouse contract is a separate exercise. The card links to the complete repository.
+
+The five project-count cards use equal widths in a centered desktop layout: AI Engineering / Deep Learning / Machine Learning, then Web Development / App Development. Narrow screens stack these cards for readability.
+
 ## Profile statistics
 
 These are static snapshots, not live API integrations.
@@ -41,7 +48,7 @@ These are static snapshots, not live API integrations.
 
 ## Generated thumbnails
 
-Seven original illustrations were generated with the built-in imagegen tool, resized proportionally to fit within 960 × 540, and compressed as WebP. Each shipped asset is strictly below 50,000 bytes. These are conceptual portfolio illustrations, not screenshots of the applications.
+Eight original illustrations were generated with the built-in imagegen tool, resized proportionally to fit within 960 × 540, and compressed as WebP. Each shipped asset is strictly below 50,000 bytes. These are conceptual portfolio illustrations, not screenshots of the applications.
 
 The shared prompt prefix and per-image requests below record the final prompt set. Each complete prompt is the shared prefix followed by its request.
 
@@ -58,3 +65,9 @@ Use case: stylized-concept. Asset type: landscape 16:9 software portfolio projec
 - `public/white-noise-bar.webp`: Primary request: a macOS menu bar background sound player. Floating compact audio panel, three soft blue waveform tiles, speaker, headphones, loop symbol and simple volume slider. Title text exactly 'WHITE NOISE BAR'.
 - `public/invoxcel.webp`: Primary request: invoice document extraction and review to spreadsheet. An invoice page passes through an intelligent scanning frame into tidy spreadsheet rows, with a human review check mark. Title text exactly 'INVOXCEL'.
 - `public/job-hunter.webp`: Primary request: AI job search and application tracking assistant. A briefcase and search lens, application pipeline cards, personalized cover letter, and small AI sparkle. Title text exactly 'JOB HUNTER'.
+
+### FlyRank thumbnail prompt
+
+Use case: stylized-concept. Asset type: landscape 16:9 software portfolio project thumbnail. Style: polished editorial technical illustration, pale blue blueprint grid background, precise navy linework, rounded white panels, soft blue shading and small warm amber highlights. Broad shapes and strong readable silhouette at small card sizes, generous margins, no tiny text, no watermark. Primary request: FlyRank machine learning research notebooks for search click-through-rate benchmarking. Show a central open computational notebook with tidy Python-style code lines and a bar chart, connected to small panels representing data quality checks, a decision tree, a random forest, and a validation checklist. Include an understated research paper sheet. Do not imply improved rankings or business results. Title text exactly 'FLYRANK ML'. Create one finished landscape thumbnail consistent with an illustrated software project portfolio.
+
+Final edit prompt: Edit this FlyRank ML portfolio illustration. Preserve its landscape composition, pale blue blueprint palette, title 'FLYRANK ML', laptop, research paper, data quality panel and tree illustrations. Replace ALL code in the notebook with simple abstract navy/blue/amber horizontal code-like strokes with absolutely no readable code, filenames, model names or numerals. Replace the laptop chart with three unlabelled equal-height blue bars: no axes, values, rankings or performance claims. On the validation panel replace its items with exactly 'Client-disjoint validation', 'Leakage checks', 'Baseline comparison', 'Reproducible notebooks'. Keep data quality labels, DECISION TREE, RANDOM FOREST and RESEARCH PAPER. This is a conceptual illustration of a regression benchmarking study, so no AUC, classification metrics, logistic regression, numeric performance results, or ordinary random train/test split text anywhere.
