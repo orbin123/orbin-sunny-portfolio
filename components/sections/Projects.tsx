@@ -104,8 +104,9 @@ interface StatCardProps {
 }
 
 const StatCard: React.FC<StatCardProps> = ({ label, count }) => (
-  <div className="glass-panel p-6 h-40 rounded-2xl flex flex-col items-center justify-center text-center group hover:bg-white/5 transition-colors duration-300">
-    <span className="text-4xl md:text-5xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-b from-white to-white/40 mb-2 group-hover:scale-110 transition-transform duration-300">
+  <div className="glass-panel p-6 min-h-40 rounded-2xl flex flex-col items-center justify-center text-center group hover:bg-white/5 transition-colors duration-300">
+    {/* Leave room for serif glyphs inside the gradient's clipping box. */}
+    <span className="shrink-0 px-2 py-1 text-4xl leading-normal md:text-5xl md:leading-normal font-serif font-bold lining-nums tabular-nums text-transparent bg-clip-text bg-gradient-to-b from-white to-white/40 mb-2 group-hover:scale-110 transition-transform duration-300">
       {count}
     </span>
     <span className="text-white/50 text-sm uppercase tracking-widest">{label}</span>
